@@ -27,7 +27,7 @@ Neste repositório há dois projetos, o `Tarefas` e o `tarefasPlay`, feitos resp
  6. Caso você tenha baixado o `Tomcat` anteriormente, especifique a pasta na qual você extraiu apertando no botão `Browse...`, ou você pode apenas clicar em `Download and Install...`, e o `Eclipse` irá baixá-lo automaticamente. 
  7. Clique no `Tarefas` e em `Add >` caso ele esteja do lado esquerdo da janela.
  8. Clique em `Finish`.
- 9. Na aba esquerda, em Project Explorer (Caso não esteja a vendo, `Window`> `Show View`>`Project Explorer`) clique com o botão direito em cima da pasta do projeto `Tarefas`, `Run As`>`Run on Server`.
+ 9. No canto esquerdo do Eclipse, em Project Explorer (Caso não esteja vendo, `Window`> `Show View`>`Project Explorer`) clique com o botão direito em cima da pasta do projeto `Tarefas`, `Run As`>`Run on Server`.
  10. Clique em `Next` na janela de seleção de servidores e em `Finish`.
  
  Pronto, o projeto rodará no endereço [http://localhost:8080/Tarefas/](http://localhost:8080/Tarefas/) .
