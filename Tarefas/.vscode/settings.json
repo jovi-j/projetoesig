@@ -1,0 +1,6 @@
+{
+	"java.project.referencedLibraries": [
+		"lib/**/*.jar",
+		"WebContent/WEB-INF/lib/javax.faces-2.2.8.jar"
+	]
+}

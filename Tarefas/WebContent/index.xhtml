@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+	
+<h:head> 
+	<title>Cadastrar Tarefa</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"> </link>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> </meta>
+</h:head>
+
+<h:body>
+<h:messages/>
+<h:form> 
+<fieldset class="container">
+	<legend>Cadastrar Tarefa</legend>
+	<div class="row cols-md-12">
+		<label for="titulo">Titulo</label>
+		
+		<h:inputText type="text" requiredMessage="Por favor, digite um título para a tarefa." value="#{cadastroTarefasMBean.tarefa.titulo}" size="50" required="true" />
+	</div>
+	<div class="row cols-md-12">
+		<label for="descricao">Descrição:</label>
+		<h:inputTextarea id="descricao" value="#{cadastroTarefasMBean.tarefa.descricao}" cols="50" rows="4"
+			required="true" requiredMessage="Por favor, digite uma descrição." /> 
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<label for="responsavel">Responsável:</label>
+			<h:selectOneMenu id="responsavel" value="#{cadastroTarefasMBean.tarefa.responsavel}">
+				<f:selectItem itemValue="2" itemLabel="João" />
+				<f:selectItem itemValue="1" itemLabel="Fábia" />
+				<f:selectItem itemValue="0" itemLabel="Ave maria" />
+			</h:selectOneMenu>
+		</div>
+		<div class="col-md-3">
+			<label for="prioridade">Prioridade:</label>
+			<h:selectOneMenu value="#{cadastroTarefasMBean.tarefa.prioridade}">
+				<f:selectItem itemValue="2" itemLabel="Alta(2)" />
+				<f:selectItem itemValue="1" itemLabel="Média(1)" />
+				<f:selectItem itemValue="0" itemLabel="Baixa(0)" />
+			</h:selectOneMenu>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<label for="deadline">Deadline:</label>
+			<h:inputText requiredMessage="Por favor, insira uma data, e a mesma deve ser válida(dd/mm/yyyy)." 
+				required="true" id="deadline" value="#{cadastroTarefasMBean.tarefa.deadline}" maxlength="10" size="7">
+				<f:convertDateTime pattern="dd/MM/yyyy" />
+			</h:inputText>
+		</div>
+	</div>
+
+	<div class="row">
+		<h:commandButton value="Cadastrar Tarefa" action="#{cadastroTarefasMBean.cadastrar}" />
+	</div>
+		
+</fieldset>
+</h:form>
+</h:body>
+</html>

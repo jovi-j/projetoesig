@@ -1,0 +1,43 @@
+#{extends 'main.html' /}
+#{set title:'Cadastrar Tarefa' /}
+
+<form action="@{Tarefas.salvarTarefa}" class="container">
+<fieldset >
+	<legend>Cadastrar Tarefa</legend>
+	<input type="hidden" name="tarefa.id" value="${tarefa?.id}">
+	<div class="row cols-md-12">
+		<label for="titulo">Titulo</label>
+		<input id="titulo" type="text" name="tarefa.titulo" value="${tarefa?.titulo}">
+	</div>
+	<div class="row cols-md-12">
+		<label for="descricao">Descrição:</label>
+		<input id="descricao" type="text" name="tarefa.descricao" value="${tarefa?.descricao}">
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<label for="responsavel">Responsável:</label>
+			<input id="responsavel" type="text" name="tarefa.responsavel" value="${tarefa?.responsavel}">
+		</div>
+		<div class="col-md-3">
+			<label for="prioridade">Prioridade:</label>
+			<select id="prioridade" name="tarefa.prioridade" >
+					<option value="0" #{if tarefa?.prioridade == 0} selected #{/if}>Baixa</option>
+					<option value="1" #{if tarefa?.prioridade == 1} selected #{/if}>Media</option>
+					<option value="2" #{if tarefa?.prioridade == 2} selected #{/if}>Alta</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<label for="deadline">Deadline:</label>
+			<input id="deadline" type="text" name="deadline" value="${tarefa?.deadline?.format("dd/MM/yyyy")}">
+		</div>
+	</div>
+
+	<div class="row">
+		<button type="submit">Cadastrar Tarefa</button>
+	</div>
+		
+</fieldset>
+</form>    
+

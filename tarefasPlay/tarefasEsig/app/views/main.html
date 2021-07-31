@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/mini.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/logo-esig1.svg'}">
+    </head>
+    <body class="container">
+   <header>
+   		<img alt="Esig" src="@{'/public/images/logo-esig1.svg'}">
+    	<a class="button" href="@{Tarefas.index()}">Cadastrar Tarefa</a>
+    	<a class="button" href="@{Tarefas.listarTarefas()}">Listar Tarefas</a>
+   </header> 
+        #{doLayout /}
+        
+        #{get 'moreScripts' /}
+    </body>
+</html>

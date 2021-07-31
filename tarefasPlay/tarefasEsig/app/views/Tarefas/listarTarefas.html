@@ -1,0 +1,62 @@
+#{extends 'main.html' /}
+#{set title:'Listar Tarefas' /}
+
+<form action="@{Tarefas.buscaGeral}" class="container" style="overflow:hidden;" >
+<fieldset>
+	<legend>Buscar Tarefas</legend>
+	<div class="row cols-md-12">
+		<label for="numero">Numero</label>
+		<input type="text" id="numero" name="id">
+	</div>
+	<div class="row cols-md-12">
+		<label for="titulo">Titulo/Descrição</label>
+		<input id="titulo" type="text" name="tituloOuDesc">
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<label for="responsavel">Responsável:</label>
+			<input id="responsavel" type="text" name="responsavel">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3">
+			<label for="situacao">Situacao:</label>
+			<select name="status">
+				<option value="false">Em Andamento</option>
+				<option value="true">Concluída</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="row">
+		<button type="submit">Buscar Tarefa</button>
+	</div>
+		
+</fieldset>
+</form>    
+<table> 
+<thead>
+  <tr>
+    <th>Número</th>
+    <th>Título</th>
+    <th>Responsável</th>
+    <th>Ações</th>
+  </tr>
+</thead>
+<tbody>
+#{list items:tarefas, as:'tarefa'}
+  <tr>
+    <td>${tarefa.id}</td>
+    <td>${tarefa.titulo}</td>
+    <td>${tarefa.responsavel}</td>
+    <td>
+
+    	<a href="@{Tarefas.editarTarefa(tarefa.id)}">Editar</a> |
+    	<a href="@{Tarefas.excluirTarefa(tarefa.id)}">Excluir</a> |
+    	<a href="@{Tarefas.concluirTarefa(tarefa.id)}">Concluir</a>
+    </td>
+  </tr>
+ #{/list}
+</tbody>
+</table>
