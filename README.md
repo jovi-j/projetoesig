@@ -40,7 +40,7 @@ Neste repositório há dois projetos, o `Tarefas` e o `tarefasPlay`, feitos resp
 ## Pré-requisitos
 
 #### Para ambos:
-- JDK 1.8/Java 8 ou superior;
+- JDK 1.7/Java 7 ou superior;
 
 #### Projeto ``Tarefas``:
  - Eclipse IDE 4.7.2 (Oxygen);
