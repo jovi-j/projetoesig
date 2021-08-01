@@ -25,7 +25,7 @@ O aplicativo deve ser capaz de criar tarefas, assim como também deve ser possí
 
 *Tentei* fazer o projeto utilizando as tecnologias propostas (`JSF`, seguindo [este tutorial fornecido pelo IMD](https://materialpublic.imd.ufrn.br/curso/disciplina/3/54) e `Posgresql`), porém ~~depois de apanhar bastante~~ após algumas tentativas, acabei ~~desistindo~~ decidindo fazer um segundo projeto, utilizando o ``Play! Framework 1.6.0``, que se aproxima do que eu realmente queria fazer.
 
-Neste repositório há dois projetos, o `Tarefas` e o `tarefasPlay`, feitos respectivamente com ``JSF`` e `Play! Framework`, além de uma framework CSS chamada [`mini.css`](https://minicss.org).
+Neste repositório há dois projetos, o `Tarefas` e o `tarefasPlay`, feitos respectivamente com ``JSF`` e `Play! Framework`. Ambos os projetos utilizam uma framework CSS chamada [`mini.css`](https://minicss.org).
 
 #### Projeto `Tarefas`:
 
