@@ -1,12 +1,46 @@
 # Projeto ESIG - Gerenciador de Tarefas
+
+## Introdução
+O projeto consiste em um aplicativo web para gerenciar tarefas e afazeres. Uma tarefa consiste em:
+
+ - Número (Único, para identificar a tarefa)
+ - Título
+ - Descrição
+ - Responsável
+ - Prioridade
+ - Data Limite
+ - Andamento(Em andamento/Concluída)
+
+O aplicativo deve ser capaz de criar tarefas, assim como também deve ser possível listá-las. Na parte da listagem, deverá ser possível buscar tarefas pelo seu **número**, **conteúdo no titulo ou na descrição**, **responsável** e pelo seu **andamento**(Tarefas Concluídas/Tarefas em Andamento), Também, na mesma parte da listagem, deverá ser possível **marcar como concluída**, **editar** ou **excluir** uma tarefa.
+
+## Desenvolvimento
+
 *Tentei* fazer o projeto utilizando as tecnologias propostas (`JSF`, seguindo [este tutorial fornecido pelo IMD](https://materialpublic.imd.ufrn.br/curso/disciplina/3/54) e `Posgresql`), porém ~~depois de apanhar bastante~~ após algumas tentativas, acabei ~~desistindo~~ decidindo fazer um segundo projeto, utilizando o ``Play! Framework 1.6.0``, que se aproxima do que eu realmente queria fazer.
 
 Neste repositório há dois projetos, o `Tarefas` e o `tarefasPlay`, feitos respectivamente com ``JSF`` e `Play! Framework`.
 
+#### Projeto `Tarefas`:
+
+ - [X] Criar Tarefa
+ - [ ] Listar Tarefa(s)
+ - [ ] Modificar Tarefas
+ - [ ] Apagar Tarefa
+ - [ ] Marcar Tarefa como concluída
+ - [ ] Persistir Tarefas em um Banco de Dados (Postgresql)
+
+#### Projeto `tarefasPlay`:
+
+ - [x] Criar Tarefa
+ - [x] Listar Tarefa(s)
+ - [x] Modificar Tarefas
+ - [x] Apagar Tarefa
+ - [x] Marcar Tarefa como concluída
+ - [x] Persistir Tarefas em um Banco de Dados (Postgresql)
+
 ## Pré-requisitos
 
 #### Para ambos:
-- JDK 1.8/Java 8 ou superior;
+- JDK 1.7/Java 7 ou superior;
 
 #### Projeto ``Tarefas``:
  - Eclipse IDE 4.7.2 (Oxygen);
