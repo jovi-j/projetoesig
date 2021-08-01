@@ -1,4 +1,7 @@
 # Projeto ESIG - Gerenciador de Tarefas
+![JDK Version](https://img.shields.io/badge/JDK->=1.7-blue)
+![Play! Version](https://img.shields.io/badge/Play!%20Framework-1.6.0-blue)
+![JSF Version](https://img.shields.io/badge/JSF-2.0-blue)
 
 ## Introdução
 O projeto consiste em um aplicativo web para gerenciar tarefas e afazeres. Uma tarefa consiste em:
