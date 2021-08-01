@@ -46,14 +46,15 @@ public class Tarefa extends Model{
 	public Date getDeadline() {
 		return deadline;
 	}
+
+    // Setter modificado para converter String de data para Date
 	public void setDeadline(String deadline) {
-		// para converter datas para o BD
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		try {
 			this.deadline = sdf.parse(deadline);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+            Date datanull = new Date();
+            this.deadline = datanull;
 		}
 	}
 	public boolean isStatus() {

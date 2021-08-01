@@ -11,6 +11,9 @@ import models.*;
 public class Tarefas extends Controller {
 
 	// Create //
+
+    // Por algum motivo estranho, a data não é passada corretamente, então eu
+    // recebo ela em String, e no método setDeadline() é feita a conversão para Date
 	public static void salvarTarefa(Tarefa tarefa, String deadline) {
 		tarefa.setDeadline(deadline);
 		tarefa.save();
@@ -28,15 +31,15 @@ public class Tarefas extends Controller {
     }
     
     public static void buscaGeral(Long id, String tituloOuDesc, String responsavel, Boolean status) {
+            // Caso o ID seja fornecido, não é necessário checar os outros campos
     		if(id != null) {
-    			// Pulo das outras buscas caso seja fornecido o número (id)
     			Tarefa tarefas = Tarefa.findById(id);
     			renderTemplate("Tarefas/listarTarefas.html", tarefas);
     			return;
     		}
     		
 			// Devido a natureza do "LIKE", se não for passado nada nos 'tituloOuDesc' ou 'responsavel'
-    		// amobos os campos ficariam com '%%', o que retornaria 'toddos os elementos que tem qualquer coisa no título, 
+    		// amobos os campos ficariam com '%%', o que retornaria "todos os elementos que tem qualquer coisa no título, 
     		// descrição ou responsável".
     		
     		if(!tituloOuDesc.equals(null) || !tituloOuDesc.isEmpty()) {
@@ -50,6 +53,7 @@ public class Tarefas extends Controller {
     }
 
     // Update //
+
     public static void editarTarefa(Long id) { 
     	Tarefa tarefa = Tarefa.findById(id);
     	renderTemplate("Tarefas/index.html", tarefa);
